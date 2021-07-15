@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quiz</title>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		body{
+				margin : 0px;
+				padding : 0px;
+		}
+
+		.head{
+			text-align: center;
+			font-size: 30px;
+			margin: 20px 0px;
+		}
+
+		.quiz{
+			background-color: black;
+		}
+
+		.body{
+			font-size: 20px;
+			border: 1px solid black;
+		}
+
+		.user_name input{
+			padding: 5px 10px;
+			border:none;
+			border-bottom:1px solid black;
+			outline:none;
+			background:none;
+		}
+
+		.result_bord{ 
+			color: white;
+            border: 3px solid transparent; 
+            border-image: linear-gradient(to right, red, orange); 
+            border-image-slice: 1; 
+            padding: 25px; 
+            background-color: black;
+		}		
+	
+
+	</style>
+
+	<!-- Animation On Scroll CDN  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	 <!--  Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #212F3D;">
+    <a href="#" class="navbar-brand"><h2>StudyLikeChamp</h2></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="index.html" class="nav-item nav-link">About us</a>
+            <a href="#" class="nav-item nav-link active">Quiz</a>
+            <a href="index.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a href="#" class="nav-item nav-link">Login</a>
+        </div>
+    </div>
+  </nav>
+
+<div class="head"><u>Class 6 Mathematics</u></div>
+<div class="head">Quiz 2</div>
+<!-- Trigger the modal with a button -->
+<div class="container">
+	<button class="btn btn-info mb-3" data-toggle="modal" data-target="#myModal">Enter Your Name</button>
+</div>
+
+<div class="container">
+	<div class="">
+ 	<form name="form">
+
+ 			<a name="result_div">
+ 				<div class="container text-center mb-5">
+ 				<div id="result"></div> 
+ 				</div>
+ 			</a>
+
+ 			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+				 Question 1. The sum of any three angles of a rectangle:<hr>
+ 				<input type="radio" name="a1" value="a" id="ques">A. 180 <br>
+ 				<input type="radio" name="a1" value="b" id="ques">B. 360 <br>
+ 				<input type="radio" name="a1" value="c" id="ques">C. 270 <br>
+				<input type="radio" name="a1" value="d" id="ques">D. None of these <br>
+				<div id="ques_1"></div>
+			</div>	
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 2. LCM of 20 and 30 is <hr>
+ 				<input type="radio" name="b1" value="a">A. 50 <br>
+ 				<input type="radio" name="b1" value="b">B. 60 <br>
+ 				<input type="radio" name="b1" value="c">C. 70 <br>
+ 				<input type="radio" name="b1" value="d">D. None of these <br>
+ 				<div id="ques_2"></div>
+			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 3. Which is Even Numbers <hr>
+ 				<input type="radio" name="c1" value="a">A. 1,3,5,7 <br>
+ 				<input type="radio" name="c1" value="b">B. 0,2,4,5 <br>
+ 				<input type="radio" name="c1" value="c">C. 1,2,3,4 <br>
+				<input type="radio" name="c1" value="d">D. 0,2,4,6 <br>
+				<div id="ques_3"></div>
+			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 4. Square Root of 5 is (5)^2 <hr>
+ 				<input type="radio" name="d1" value="a">A. 125 <br>
+ 				<input type="radio" name="d1" value="b">B. 35 <br>
+ 				<input type="radio" name="d1" value="c">C. 25 <br>
+ 				<input type="radio" name="d1" value="d">D. 15 <br>
+ 				<div id="ques_4"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 5. 255-90+1-895+729 = __ <hr>
+ 				<input type="radio" name="e1" value="a">A. 155 <br>
+ 				<input type="radio" name="e1" value="b">B. 562 <br>
+ 				<input type="radio" name="e1" value="c">C. 5 <br>
+ 				<input type="radio" name="e1" value="d">D. 0 <br>
+ 				<div id="ques_5"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+				Question 6. which Two Number is Prime <hr>
+				<input type="radio" name="f1" value="a">A. 2 and 3 <br>
+				<input type="radio" name="f1" value="b">B. 2 and 4 <br>
+ 				<input type="radio" name="f1" value="c">C. 3 and 4 <br>
+ 				<input type="radio" name="f1" value="d">D. 4 and 5 <br>
+ 				<div id="ques_6"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 7. If  2/x = 10/20. Then find value of x<hr>
+ 				<input type="radio" name="g1" value="a">A. 2 <br>
+				<input type="radio" name="g1" value="b">B. 10 <br>
+ 				<input type="radio" name="g1" value="c">C. 40 <br>
+ 				<input type="radio" name="g1" value="d">D. 4 <br>
+ 				<div id="ques_7"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 8. A=10 and B=16. Then find the value of C. <br>if A+C=B <hr>
+ 				<input type="radio" name="h1" value="a">A. 6 <br>
+ 				<input type="radio" name="h1" value="b">B. 10 <br>
+ 				<input type="radio" name="h1" value="c">C. 26 <br>
+ 				<input type="radio" name="h1" value="d">D. 16 <br>
+ 				<div id="ques_8"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 9. The factor of 25 is<hr>
+ 				<input type="radio" name="i1" value="a">A. 1,15,25 <br>
+ 				<input type="radio" name="i1" value="b">B. 1,5,15 <br>
+ 				<input type="radio" name="i1" value="c">C. 1,5,25 <br>
+ 				<input type="radio" name="i1" value="d">D. All of these <br>
+ 				<div id="ques_9"></div>
+ 			</div>
+			<br>
+			<div class="body px-4 py-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
+ 				Question 10. The right-angled triangle must have <hr>
+ 				<input type="radio" name="j1" value="a">A. four right angles <br>
+ 				<input type="radio" name="j1" value="b">B. one right angle <br>
+ 				<input type="radio" name="j1" value="c">C. two right angles <br>
+ 				<input type="radio" name="j1" value="d">D. three right angles <br>
+ 				<div id="ques_10"></div>
+ 			</div>
+ 				<a href="#result_div" style="text-decoration: none;"><input type="button" class="btn btn-outline-success btn-block my-4" value="Submit Answer" onclick="quiz();" id="butt"></a> <br>
+ 	</form>
+ </div>
+ </div>
+
+ <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Welcome To The Quiz Ki Duniya</h4>
+      </div>
+      
+      <form>
+      	<div class="modal-body user_name">
+       		<input type="text" placeholder="Enter Your Name" id="user_name" required="">
+     	</div>
+      	<div class="modal-footer">
+        	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="user();">Submit</button>
+    	</div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+
+ <footer class="page-footer font-small pt-4"  style="background-color: #17191C;">
+
+  <div class="container">
+
+    <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1" style="color: white;">Register for free</h5>
+      </li>
+      <li class="list-inline-item">
+        <button type="button" class="btn btn-light" style="border-radius:30px;">Sign up</button>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="footer-copyright text-center py-3" style="color: white; background-color: #0C0D0E;">© 2020 Copyright:
+    <a href=# class="text-light">StudyLikeChamp.in</a>
+  </div>
+
+</footer>
+
+ 	<!--  Bootstrap Js CDN  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+ 	<!--  Animation On Scroll CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  		AOS.init();
+	</script>
+
+	<script type="text/javascript">
+	
+	</script>
+
+	<script type="text/javascript">
+
+		let user_name = "";
+
+		function user(){
+			user_name = (document.getElementById('user_name').value).toUpperCase();
+		}
+
+		let count = 0
+		function quiz(){
+		var z1 = document.form.a1.value;
+		var z2 = document.form.b1.value;
+		var z3 = document.form.c1.value;
+		var z4 = document.form.d1.value;
+		var z5 = document.form.e1.value;
+		var z6 = document.form.f1.value;
+		var z7 = document.form.g1.value;
+		var z8 = document.form.h1.value;
+		var z9 = document.form.i1.value;
+		var z10 = document.form.j1.value;
+		var wrong = 0;
+
+		for(i=1; i<=10; i++){
+			if(eval('z'+i) == "" || eval('z'+i) == null)
+			{
+				alert("Please Select Question No : "+ i);
+			 	return false;
+			}
+		}
+		var count=0;
+		if(z1 == "c"){
+			count++;
+			document.getElementById('ques_1').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_1').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z2 == "b"){
+			count++;
+			document.getElementById('ques_2').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_2').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z3 == "d"){
+			count++;
+			document.getElementById('ques_3').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_3').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z4 == "c"){
+			count++;
+			document.getElementById('ques_4').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_4').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z5 == "d"){
+			count++;
+			document.getElementById('ques_5').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_5').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z6 == "a"){
+			count++;
+			document.getElementById('ques_6').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_6').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z7 == "d"){
+			count++;
+			document.getElementById('ques_7').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_7').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z8 == "a"){
+			count++;
+			document.getElementById('ques_8').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_8').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z9 == "c"){
+			count++;
+			document.getElementById('ques_9').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_9').innerHTML = "<h4>Wrong</h4>"
+		}
+
+		if(z10 == "b"){
+			count++;
+			document.getElementById('ques_10').innerHTML = '<h4><span>Correct</span></h4>'
+		}
+		else{
+			wrong++;
+			document.getElementById('ques_10').innerHTML = "<h4>Wrong</h4>"
+		}
+
+
+		if(count>=8 && count<=10){
+			document.getElementById("result").innerHTML = '<span style="font-size: 25px;">$$ Congratulations $$ &nbsp;&nbsp;'+user_name +'</span>'+'<h4>Your Scored is '+count+' Out Of 10</h4>'+'<h5>Correct Answer : '+count+'</h5>' + '<h5>Wrong Answer : '+wrong+'</h5>';
+
+			var result_div = document.getElementById('result');
+				result_div.classList.add("result_bord");
+		}
+		else if(count>=6 && count<=7){
+			document.getElementById("result").innerHTML = '<span style="font-size: 25px;">Nice &nbsp;&nbsp;'+user_name +'</span>'+'<h5>Your Scored is '+count+' Out Of 10</h5>'+'<h5>Correct Answer : '+count+'</h5>' + '<h5>Wrong Answer : '+wrong+'</h5>';
+
+			var result_div = document.getElementById('result');
+				result_div.classList.add("result_bord");
+		}
+		else if(count<6){
+			document.getElementById("result").innerHTML = '<span style="font-size: 25px;">!! Opss !! &nbsp;&nbsp;'+user_name +'</span>'+'<br>'+'You Have To Hard Work'+'<h5>Your Scored is '+count+' Out Of 10</h5>'+'<h5>Correct Answer : '+count+'</h5>' + '<h5>Wrong Answer : '+wrong+'</h5>';
+			var result_div = document.getElementById('result');
+				result_div.classList.add("result_bord");
+		}
+		}
+
+	</script>
+</body>
+</html>
